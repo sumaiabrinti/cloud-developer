@@ -33,7 +33,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   
   // Root Endpoint
   // Displays a simple message to the user
-  app.get( " "/filteredimage", async ( req, res ) => {
+  app.get( "/filteredimage", async ( req, res ) => {
     //console.log(req.query);
     let image_url = req.query.image_url;
     if(typeof image_url == 'undefined')
@@ -50,7 +50,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
       await deleteLocalFiles([filteredPath]);
     });
     
-  } );
+  });
   
 
   // Start the Server
